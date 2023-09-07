@@ -43,7 +43,7 @@ const index = () => {
                         </ul>
 
 
-                        <Dropdown label="menu">
+                        <Dropdown label="MENU">
                             <ul>
                                 <li>
                                     <Link to="/profile" className="p-2 bg-slate-50 rounded-md hover:bg-slate-200 m-1 block"> Profile </Link>
