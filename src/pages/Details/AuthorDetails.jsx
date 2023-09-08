@@ -1,13 +1,11 @@
-
-
-import React from 'react';
+import React from "react";
 
 const AuthorDetails = () => {
-    return (
-        <div>
-            <h1>Auhtor details</h1>
-        </div>
-    );
+  return (
+    <div>
+     
+    </div>
+  );
 };
 
 export default AuthorDetails;
