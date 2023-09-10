@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Outlet, Navigate, useNavigate, NavLink, Link } from "react-router-dom";
+import { Outlet,useNavigate, NavLink, Link } from "react-router-dom";
 import SettingHeader from "./SettingHeader"
 import { Button } from "antd";
 import "./style.scss";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button,Form, Input } from "antd";
 import IMG from "../../assets/images/Signup.png";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../service/auth/useAuth";
@@ -9,13 +9,21 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+
+    const newUser = {
+      first_name: values.firstName,
+      last_name: values.lastName,
+      phone: values.phone,
+      password: values.password,
+      email: values.email,
+      user_photo: "avatar.png",
+    };
 
     useAuth
       .register(values)
       .then((res) => {
         console.log(res);
-       if(rs.data.status===200){
+       if(res.data.status===200){
           
            toast.success(`${values.firstName} muvaffaqiyatli royhatdan utildi`);
            setTimeout(() => {
@@ -42,7 +50,7 @@ const SignUp = () => {
         </div>
         <div className="item">
           <ToastContainer />
-          <h1 className="text-[24px] font-bold">RUYHATDANN UTISH</h1>
+        <h1 className="text-[24px] font-bold font-['ArialBlack']">RUYHATDANN UTISH</h1>
           <h2 className=" my-8 text-sm font-sans">
             Avval ruyhatdan utgansizmi?
             <Link to="/signin" className="text-blue-400">
@@ -77,7 +85,7 @@ const SignUp = () => {
               ]}
             >
               <Input
-                className=" rounded-lg py-2 boder-[#c8c8c8] "
+                className=" rounded-lg py-2 outline-none "
                 placeholder="Ism"
               />
             </Form.Item>
@@ -92,7 +100,7 @@ const SignUp = () => {
               ]}
             >
               <Input
-                className=" rounded-lg py-2 boder-[#c8c8c8] "
+                className=" rounded-lg py-2 outline-none "
                 placeholder="Sharif"
               />
             </Form.Item>
@@ -108,7 +116,7 @@ const SignUp = () => {
             >
               <Input
                 type="tel"
-                className=" rounded-lg py-2 boder-[#c8c8c8] "
+                className=" rounded-lg py-2 outline-none"
                 placeholder="Tel"
               />
             </Form.Item>
@@ -122,7 +130,7 @@ const SignUp = () => {
               ]}
             >
               <Input
-                className=" rounded-lg py-2 boder-[#c8c8c8] "
+                className=" rounded-lg py-2 outline-none"
                 placeholder="Email"
               />
             </Form.Item>
@@ -136,7 +144,7 @@ const SignUp = () => {
                 },
               ]}
             >
-              <Input.Password className="py-2 mt-4" placeholder="Parol" />
+              <Input.Password className="py-2 mt-4 outline-none" placeholder="Parol" />
             </Form.Item>
 
             <Form.Item>
