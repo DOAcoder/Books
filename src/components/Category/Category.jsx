@@ -32,11 +32,11 @@ const Category = () => {
             })}
           </div>
 
-          <div className="grid grid-cols-7 gap-x-[35px] gap-y-[52px]">
+          {/* <div className="grid grid-cols-7 gap-x-[35px] gap-y-[52px]">
             {"HELLOWORLD!HEY".split("").map((item) => {
               return <CardBook />;
             })}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

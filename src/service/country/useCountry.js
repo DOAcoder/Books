@@ -5,7 +5,7 @@ const headers = {
   Authorization: `Bearer ${localStorage.getItem("token")}`
 }
 
-const useBook = {
+const useCountry = {
   createCountry: (data) => api.post("/country", data),
   getCountry: () => api.get("/country", { headers }),
   getCountryItem: (id) => api.get(`/country/${id}`, { headers }),

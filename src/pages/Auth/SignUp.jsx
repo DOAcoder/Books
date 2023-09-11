@@ -33,7 +33,7 @@ const SignUp = () => {
       })
       .catch((err) => {
         console.log(err);
-        toast.err("Xatolik!");
+        toast.error("Xatolik!");
       });
   }; 
 

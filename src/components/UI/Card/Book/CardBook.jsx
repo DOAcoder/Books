@@ -14,7 +14,7 @@ const CardBook = () => {
         <p className="text-[12px] text-gray-300 mb-[14px]">O’tkir Hoshimov</p>
         <div className="text-[12px]">
           <span className="flex gap-x-[7px]">
-            <i class="bx bxs-star text-[16px]"></i>{" "}
+            <i className="bx bxs-star text-[16px]"></i>{" "}
             <span>4.1 • 3400 ta fikrlar</span>
           </span>
         </div>

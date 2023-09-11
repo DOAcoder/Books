@@ -1,6 +1,10 @@
 import book from "../../assets/images/book.png";
 import CardBook from "../../components/UI/Card/Book/CardBook";
-import CardQuote from "../../components/UI/Card/Quote/CardQuote";
+import CardB from "../../components/UI/Card/B/CardB";
+
+
+
+
 const BookDetails = () => {
   return (
     <section className="pt-[60px] pb-10">
@@ -14,20 +18,20 @@ const BookDetails = () => {
                 Qo’rqma
               </h1>
               <div className="mb-[30px] flex items-center justify-between w-[200px]">
-                <h5 className="text-[16px] text-[#C9AC8C]">Javlon Jovliyev</h5>{" "}
-                |{" "}
+                <h5 className="text-[16px] text-[#C9AC8C]">Javlon Jovliyev</h5>
+                |
                 <span className="flex items-center justify-center text-[15px] font-['Visuelt']">
-                  {" "}
-                  <i className="bx bxs-star text-[16px]"></i> <span>4.1</span>{" "}
+                  
+                  <i className="bx bxs-star text-[16px]"></i> <span>4.1</span>
                 </span>
               </div>
               <ul className="flex flex-col gap-y-5 text-[20px] mb-10">
                 <li>
-                  <span className="text-gray-400 me-1">Sahifalar soni: </span>{" "}
+                  <span className="text-gray-400 me-1">Sahifalar soni: </span>
                   376
                 </li>
                 <li>
-                  <span className="text-gray-400 me-1">Chop etilgan: </span>{" "}
+                  <span className="text-gray-400 me-1">Chop etilgan: </span>
                   2021
                 </li>
                 <li>
@@ -87,7 +91,7 @@ const BookDetails = () => {
                   </div>
                 </div>
                 <button className="bg-[#C9AC8C] py-[16px] px-[32px] text-[16px]">
-                  Javonga qo’shish{" "}
+                  kutubhonaga qo’shish
                 </button>
               </div>
             </div>
@@ -106,7 +110,7 @@ const BookDetails = () => {
 
           <div className="flex mb-[53px] justify-between">
             {"GG".split("").map((item) => {
-              return <CardQuote />;
+              return <CardB />;
             })}
           </div>
 

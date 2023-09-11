@@ -16,10 +16,10 @@ const CardAuthor = () => {
         </p>
         <div className="flex items-center justify-around text-[16px]">
           <span className="flex items-center justify-center gap-x-2">
-            <i class="bx bxs-book-alt text-[20px]"></i> <span>34</span>
+            <i className="bx bxs-book-alt text-[20px]"></i> <span>34</span>
           </span>
           <span className="flex items-center justify-center gap-x-2">
-            <i class="bx bx-headphone text-[20px]"></i> <span>13</span>
+            <i className="bx bx-headphone text-[20px]"></i> <span>13</span>
           </span>
         </div>
       </div>
