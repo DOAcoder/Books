@@ -9,7 +9,7 @@ import useFile from "../../../service/FileUpload/useFileUpload";
 
 
 
-const getBase64 = (file) =>
+const getBase64 = (file) => 
   new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -24,9 +24,7 @@ const UploadImage = ({setImage}) => {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
   const [previewTitle, setPreviewTitle] = useState("");
-  const [fileList, setFileList] = useState([
-    
-  ]);
+  const [fileList, setFileList] = useState([]);
 
 
   const handleCancel = () => setPreviewOpen(false);
@@ -53,14 +51,8 @@ const UploadImage = ({setImage}) => {
      if (fileLists.persent) {
        console.log(fileList[0]);
        setImage(fileLists)
-       
-        
-
-
-      
-       }
-
-     }
+      }
+    
   }
      
 
@@ -107,3 +99,4 @@ const UploadImage = ({setImage}) => {
   );
 };
 export default UploadImage;
+
