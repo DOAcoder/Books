@@ -1,6 +1,14 @@
 import { PlusOutlined } from "@ant-design/icons";
 import { Modal, Upload } from "antd";
 import { useState } from "react";
+import useFile from "../../../service/FileUpload/useFileUpload";
+
+
+
+
+
+
+
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -8,7 +16,10 @@ const getBase64 = (file) =>
     reader.onload = () => resolve(reader.result);
     reader.onerror = (error) => reject(error);
   });
-const UploadImage = () => {
+
+
+const UploadImage = ({setImage}) => {
+
 
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
@@ -41,6 +52,14 @@ const UploadImage = () => {
 
      if (fileLists.persent) {
        console.log(fileList[0]);
+       setImage(fileLists)
+       
+        
+
+
+      
+       }
+
      }
   }
      

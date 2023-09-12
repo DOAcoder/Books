@@ -1,7 +1,7 @@
 import React from "react";
-import { Button,Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import IMG from "../../assets/images/Signin.png";
-import { Link, json, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../service/auth/useAuth";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -9,24 +9,25 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-    const user = {emil: values.userrname, password: values.password}
-   
-    useAuth.login(user).then((res) => {
+    console.log("Success:", values);
+    const user = { email: values.username, password: values.password };
 
-        localStorage.setItem("token", Date.now());
-        localStorage.setItem("user", JSON.stringify(res.data.user))
-
-       if(res.data.status === 200 && localStorage.getItem("token")){
-          navigate("/")
-       }
-       toast.success("Success!");
-       
-     }).catch((err)=>{
-        console.log(err);
-        toast.error('Error:',err.message)
+    useAuth
+      .login(user)
+      .then((res) => {
         
-     })
-   
+        localStorage.setItem("token", res?.data?.token);
+        localStorage.setItem("user", res?.data?.user?.first_name);
+        toast.error("Error:", err.message);
+        
+        if (res.data.status === 201 && localStorage.getItem("token")) {
+          navigate("/");
+        }
+        toast.success("Success!");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -39,7 +40,7 @@ const SignIn = () => {
           <img src={IMG} alt="" />
         </div>
         <div className="item">
-          <ToastContainer/>
+          <ToastContainer />
           <h1 className="text-[24px] font-bold font-['ArialBlack]">KIRISH</h1>
           <h2 className=" my-8 text-sm font-sans">
             Siz ruyhatdan utgansizmi?{" "}
@@ -89,7 +90,10 @@ const SignIn = () => {
                 },
               ]}
             >
-              <Input.Password className="py-2 mt-4 outline-none" placeholder="Parol" />
+              <Input.Password
+                className="py-2 mt-4 outline-none"
+                placeholder="Parol"
+              />
             </Form.Item>
 
             <Form.Item>

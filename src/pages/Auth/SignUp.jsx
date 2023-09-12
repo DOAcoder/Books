@@ -7,8 +7,10 @@ import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
   const navigate = useNavigate();
+ 
 
   const onFinish = (values) => {
+    console.log("Success", values);
 
     const newUser = {
       first_name: values.firstName,
@@ -16,15 +18,18 @@ const SignUp = () => {
       phone: values.phone,
       password: values.password,
       email: values.email,
-      user_photo: "avatar.png",
+    
     };
+
+    console.log(newUser);
+
 
     useAuth
       .register(values)
       .then((res) => {
         console.log(res);
-       if(res.data.status===200){
-          
+       if(res.data.status===201){
+          console.log(res);
            toast.success(`${values.firstName} muvaffaqiyatli royhatdan utildi`);
            setTimeout(() => {
              navigate("/signin");

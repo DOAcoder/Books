@@ -1,6 +1,6 @@
 import book from "../../assets/images/book.png";
 import CardBook from "../../components/UI/Card/Book/CardBook";
-import CardB from "../../components/UI/Card/B/CardB";
+// import CardB from "../../components/UI/Card/B/CardB";
 
 
 
@@ -108,11 +108,11 @@ const BookDetails = () => {
             </li>
           </ul>
 
-          <div className="flex mb-[53px] justify-between">
+          {/* <div className="flex mb-[53px] justify-between">
             {"GG".split("").map((item) => {
               return <CardB />;
             })}
-          </div>
+          </div> */}
 
           <div className="flex items-center justify-between mb-[66px]">
             <h4 className="text-[#C9AC8C] uppercase text-[25px] font-['Rotter']">

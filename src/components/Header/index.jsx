@@ -6,7 +6,7 @@ import "./style.scss";
 
 const index = () => {
   const [isLoggeedIn, setIsLoggedIn] = useState(localStorage.getItem("token") || false);
-   const [userName] = useState( JSON.parse(localStorage.getItem("user")));
+   const [userName] = useState(localStorage.getItem("user"));
   const go = useNavigate();
 
   const logout = () => {
@@ -51,7 +51,7 @@ const index = () => {
               </li>
             </ul>
 
-            <Dropdown label={userName?.first_name? userName?.first_name : "User" }>
+            <Dropdown label={userName? userName: "User" }>
               {isLoggeedIn ? (
                 <ul>
                   <li>
