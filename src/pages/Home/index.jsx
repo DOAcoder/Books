@@ -5,7 +5,7 @@ import "./style.scss";
 import IntroCarousel from "../../components/UI/Carousel/IntroCarousel";
 import SearchPanel from "../../components/UI/SearchPanel/SearchPanel";
 import VECTOR_2 from "../../assets/icons/vector.svg";
-import Category from "../../components/category/Category";
+import Category from "../../components/Category/Category";
 import CardWrapper from "../../components/Layout/CardWrapper";
 import CardAuthor from "../../components/UI/Card/Author/CardAuthor";
 import Loading from "../../components/UI/Loader/Loading";
